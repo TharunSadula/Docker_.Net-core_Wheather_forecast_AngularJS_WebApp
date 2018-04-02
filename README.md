@@ -102,26 +102,28 @@ Output:
 
 ## Building project and running the Docker Image
 1.In the project directory run the following command
-------  docker build -t {imageName} .
-
+~~~
+docker build -t {imageName} .
+~~~
 2.This creates the docker image
-
-3. docker run -d -p 80:80 {imageName}    this make the application to run at port 80
-
+~~~
+ docker run -d -p 80:80 {imageName}    this make the application to run at port 80
+~~~
 
 ## Saving the Docker Image
-
-1. docker save {imageName} > {outputName}.tar
-
+~~~
+docker save {imageName} > {outputName}.tar
+~~~
 ## Get Image from tar File
-
-1. docker load -i {outputName}.tar
-
-2.docker run -d -p {portNum}:80 {imageName} . Make sure your server listens at port this {portNum}
-
+~~~
+docker load -i {outputName}.tar
+~~~
+~~~
+docker run -d -p {portNum}:80 {imageName} . Make sure your server listens at port this {portNum}
+~~~
 # Execution
 
-Readme Link:- https://github.uc.edu/sadulatn/weatherApiDocker/blob/master/README.md
+Readme Link:- https://github.com/TharunSadula/Docker_.Net-core_Wheather_forecast_AngularJS_WebApp/blob/master/README.md
 
 DockerImageLink:- https://s3.us-east-2.amazonaws.com/weatherapptharun/forecastapptharun.tar
 
