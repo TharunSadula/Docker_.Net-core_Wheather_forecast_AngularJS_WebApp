@@ -1,7 +1,6 @@
 
-# WeatherForecast API's using .Net Core
+# WeatherForecast API's using .Net Core, Docker Image creation and Swagger for API testing
 
-## Cloud Computing Homework2 Weather API  Tharun Sadula
 
 ### Implementation Details:
 
@@ -94,8 +93,43 @@ Output:
 ]
 
 
+## Docker Image
+
+## Adding Docker file
+1. Add the Docker file and docker ignore file in the project directory. (get the files from the dot net core docker sample- https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp)
+
+2. Update the Docker file ENTRYPOINT ["dotnet", "{yourdllname}.dll"]
+
+## Building project and running the Docker Image
+1.In the project directory run the following command
+------  docker build -t {imageName} .
+
+2.This creates the docker image
+
+3. docker run -d -p 80:80 {imageName}    this make the application to run at port 80
 
 
+## Saving the Docker Image
+
+1. docker save {imageName} > {outputName}.tar
+
+## Get Image from tar File
+
+1. docker load -i {outputName}.tar
+
+2.docker run -d -p {portNum}:80 {imageName} . Make sure your server listens at port this {portNum}
+
+# Execution
+
+Readme Link:- https://github.uc.edu/sadulatn/weatherApiDocker/blob/master/README.md
+
+DockerImageLink:- https://s3.us-east-2.amazonaws.com/weatherapptharun/forecastapptharun.tar
+
+Execution CMD:- docker run -d -p 80:80 forecastapptharun
+
+### Swagger:
+
+For testing the API using Swagger UI: https://weatherapitharun.azurewebsites.net/swagger
 
 #### Used Technologies:
 .NET Core framework,Microsoft Azure App-Service, SQL Server, Swagger
@@ -103,11 +137,9 @@ Output:
 The application has been hosted on:
 Base URL : https://weatherapitharun.azurewebsites.net/
 
-Readme: https://github.uc.edu/sadulatn/WeatherApi/blob/master/README.md
+Readme: https://github.com/TharunSadula/Docker_.Net-core_Wheather_forecast_AngularJS_WebApp/blob/master/README.md
 
-### Extra Credits: 
 
-For testing the API using Swagger UI: https://weatherapitharun.azurewebsites.net/swagger
 
 #### References:
 API: https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
