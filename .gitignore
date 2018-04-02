@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/WeatherApi/bin/Debug/netcoreapp2.0/WeatherApi.runtimeconfig.json
+/WeatherApi/bin/Debug/netcoreapp2.0/WeatherApi.runtimeconfig.dev.json
+/WeatherApi/bin/Debug/netcoreapp2.0/WeatherApi.pdb
+/WeatherApi/bin/Debug/netcoreapp2.0/WeatherApi.dll
+/WeatherApi/bin/Debug/netcoreapp2.0/WeatherApi.deps.json
+*.cache
+/WeatherApi/obj/Debug/netcoreapp2.0/WeatherApi.AssemblyInfo.cs
+/WeatherApi/obj/Debug/netcoreapp2.0/WeatherApi.dll
+/WeatherApi/obj/Debug/netcoreapp2.0/WeatherApi.pdb
+/WeatherApi/obj/Release/netcoreapp2.0/PubTmp/Out
+/WeatherApi/obj
+/WeatherApi/bin
